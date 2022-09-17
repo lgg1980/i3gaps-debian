@@ -111,6 +111,7 @@ sudo cp ./temp /usr/share/xsessions/i3.desktop;rm ./temp
 
 source ~/i3gaps-debian/nerdfonts.sh
 source ~/i3gaps-debian/copyconf.sh
+source ~/i3gaps-debian/personal.sh
 
 sudo apt autoremove
 pip3 install netifaces

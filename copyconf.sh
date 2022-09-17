@@ -20,4 +20,6 @@ cp -r .config/kitty ~/.config
 
 mkdir ~/.config/i3blocks
 
+touch ~/.config/i3blocks/config
+
 chmod +x ~/.config/i3/autostart.sh

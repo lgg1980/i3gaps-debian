@@ -114,4 +114,6 @@ source ~/i3gaps-debian/copyconf.sh
 
 sudo apt autoremove
 
+sudo apt install i3blocks
+
 printf "\e[1;32mYou can now reboot! Thanks you.\e[0m\n"

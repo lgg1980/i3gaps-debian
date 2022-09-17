@@ -9,7 +9,7 @@ numlockx on &
 nm-applet &
 volumeicon &
 dunst &
-# blueman-applet &
+blueman-applet &
 
 # sxhkd
 sxhkd -c ~/.config/i3/sxhkd/sxhkdrc &

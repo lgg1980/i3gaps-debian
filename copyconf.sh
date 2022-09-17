@@ -17,4 +17,7 @@ cp -r .config/i3/ ~/.config
 cp -r .config/neofetch/ ~/.config
 cp -r .config/rofi/ ~/.config
 cp -r .config/kitty ~/.config
+
+mkdir ~/.config/i3blocks
+
 chmod +x ~/.config/i3/autostart.sh

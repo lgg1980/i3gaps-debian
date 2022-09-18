@@ -15,3 +15,8 @@ sudo apt install -y ristretto pinta
 
 # Required
 pip3 install netifaces
+
+cd ~/
+mkdir conty
+cd conty
+wget https://github.com/Kron4ek/Conty/releases/download/1.21.1/conty.sh

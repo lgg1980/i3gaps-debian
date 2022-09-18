@@ -4,7 +4,8 @@ sudo apt install -y cifs-utils hfsplus hfsutils hfsutils-tcltk exfat-utils apt-t
 sudo apt install -y rar p7zip-rar xarchiver p7zip-full unace zip unzip sharutils uudeview mpack arj cabextract file-roller zstd
 sudo apt install -y xclip libnotify-bin
 
-sudo apt install -y gufw gparted bleachbit gdebi dosbox flatpak
+sudo apt install -y gufw gparted bleachbit gdebi dosbox 
+sudo apt install -y flatpak
 
 sudo apt install -y fonts-powerline fonts-liberation2
 sudo apt install -y numix-gtk-theme numix-icon-theme numix-icon-theme-circle

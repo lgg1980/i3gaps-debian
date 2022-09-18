@@ -21,9 +21,10 @@ sudo apt install -y ristretto pinta flameshot
 pip3 install netifaces
 
 # fun
-sudo apt install -y etw openttd
+# commented on 18/09/2022 must be 'relaxed' until real install, working great on VM tho
+# sudo apt install -y etw openttd
 
-cd ~/
-mkdir conty
-cd conty
-wget https://github.com/Kron4ek/Conty/releases/download/1.21.1/conty.sh
+# cd ~/
+# mkdir conty
+# cd conty
+# wget https://github.com/Kron4ek/Conty/releases/download/1.21.1/conty.sh

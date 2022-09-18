@@ -11,7 +11,7 @@ sudo apt install -y obs-studio simplescreenrecorder
 # Basic
 sudo apt install -y filezilla keepassxc thunderbird thunderbird-l10n-es-es webext-tbsync telegram-desktop remmina timeshift
 # Image
-sudo apt install -y ristretto pinta
+sudo apt install -y ristretto pinta flameshot
 
 # Required
 pip3 install netifaces

@@ -5,7 +5,7 @@ sudo apt install -y rar p7zip-rar xarchiver p7zip-full unace zip unzip sharutils
 sudo apt install -y xclip libnotify-bin
 
 # Multimedia
-sudo apt install -y clementine qbittorrent kid3 vlc youtube-dl audacity kdenlive handbrake
+sudo apt install -y clementine qbittorrent kid3 vlc youtube-dl kdenlive handbrake
 sudo apt install -y obs-studio simplescreenrecorder
 
 # Basic

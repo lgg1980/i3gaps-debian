@@ -1,30 +1,27 @@
 super + Escape
     pkill -USR1 -x sxhkd
 
-super + Return
-   kitty
+alt + Escape
+   i3lock
 
+super + shift + q
+     i3-msg exit
+#----------------------------------------------------------------
 #Rofi & dmenu
-
+#----------------------------------------------------------------
 super + space
    	rofi -modi drun -show drun -line padding 4 -hide-scrollbar -show-icons
    	
 super + p
 	dmenu_run
 
-super + shift + q
-     i3-msg exit
-
-super + e
-	pcmanfm
-
-super + m
-	mousepad
-	
 alt + p
- rofi -show
-
+        rofi -show
+#----------------------------------------------------------------
 # Application Keybindings
+#----------------------------------------------------------------
+super + Return
+   kitty
 
 super + w
     firefox-esr
@@ -32,9 +29,14 @@ super + w
 ctrl + alt + s
     flameshot gui
 
+super + e
+	pcmanfm
 
+super + m
+	mousepad
+#----------------------------------------------------------------
 #Audio Keybindings
-
+#----------------------------------------------------------------
 XF86AudioRaiseVolume
         amixer -c 1 -- sset Master 2db+
 
@@ -90,17 +92,17 @@ super + control + space
 
 super + alt + a
     i3-msg focus parent
-
+#----------------------------------------------------------------
 #workspaces
-
+#----------------------------------------------------------------
 super + {1-9,0}
     i3-msg workspace {1-9,10}
 
 super + shift+{1-9,0}
     i3-msg move container to workspace number {1-9,10}
-    
+#----------------------------------------------------------------
 #movement
-
+#----------------------------------------------------------------
 super+{h,j,k,l}
     i3-msg focus {left,down,up,right}
 
@@ -112,10 +114,9 @@ super+{Left,Down,Up,Right}
     
 super+shift+{Left,Down,Up,Right}
     i3-msg move {left,down,up,right}
-
-
+#----------------------------------------------------------------
 #other bindings
-
+#----------------------------------------------------------------
 super + q
     i3-msg kill
 

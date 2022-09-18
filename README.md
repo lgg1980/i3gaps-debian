@@ -1,6 +1,12 @@
 # i3gaps
 # Works great with Debian Testing / Devuan Ceres
 
+NOTES:
+
+lightdm it's perfect for me. So I choose it.
+
+18/09/2022.... still learning to adjust it to my very own tastes. So much work to do!
+
 ```
 sudo apt install git
 

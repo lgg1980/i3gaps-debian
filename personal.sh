@@ -22,6 +22,43 @@ sudo apt install -y ristretto pinta flameshot
 # lock screen
 sudo apt install -y xss-lock i3lock
 
+# flatpak
+
+FLATPAK_LIST=(
+	net.veloren.airshipper
+	net.davidotek.pupgui2
+	org.jdownloader.JDownloader
+	com.anydesk.Anydesk
+	io.dbeaver.DBeaverCommunity
+  nz.mega.MEGAsync
+  com.github.eneshecan.WhatsAppForLinux
+  com.discordapp.Discord
+)
+
+# add flathub repository
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# add third party software
+ 
+# update repositories
+
+sudo apt-get update -yq
+
+for flatpak_name in ${FLATPAK_LIST[@]}; do
+	if ! flatpak list | grep -q $flatpak_name; then
+		flatpak install "$flatpak_name" -y
+	else
+		echo "$package_name already installed"
+	fi
+done
+
+# grab codium
+echo "Grabbing VSCode without telemetry"
+sleep 1
+wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo dd of=/etc/apt/trusted.gpg.d/vscodium.gpg 
+echo 'deb https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs/ vscodium main' | sudo tee --append /etc/apt/sources.list.d/vscodium.list 
+sudo apt update -yq && sudo apt install codium -yq
+# --------------------------------------------------------------------------------------------------
 # Required
 pip3 install netifaces suntime python-dateutil
 

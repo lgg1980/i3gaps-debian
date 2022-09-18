@@ -4,7 +4,7 @@ sudo apt install -y cifs-utils hfsplus hfsutils hfsutils-tcltk exfat-utils apt-t
 sudo apt install -y rar p7zip-rar xarchiver p7zip-full unace zip unzip sharutils uudeview mpack arj cabextract file-roller zstd
 sudo apt install -y xclip libnotify-bin
 
-sudo apt install -y gufw gparted bleachbit gdebi dosbox
+sudo apt install -y gufw gparted bleachbit gdebi dosbox flatpak
 
 sudo apt install -y fonts-powerline fonts-liberation2
 sudo apt install -y numix-gtk-theme numix-icon-theme numix-icon-theme-circle
@@ -32,10 +32,13 @@ FLATPAK_LIST=(
   nz.mega.MEGAsync
   com.github.eneshecan.WhatsAppForLinux
   com.discordapp.Discord
+  com.anydesk.Anydesk
 )
 
 # add flathub repository
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+sudo apt update
 
 # add third party software
  
@@ -58,29 +61,14 @@ wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.g
 echo 'deb https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs/ vscodium main' | sudo tee --append /etc/apt/sources.list.d/vscodium.list 
 sudo apt update -yq && sudo apt install codium -yq
 # -----------------------------------------------------------------------------------------------------------------------
-# Anydesk
-wget -O- https://keys.anydesk.com/repos/DEB-GPG-KEY | gpg --dearmor | sudo tee /usr/share/keyrings/anydesk.gpg
-echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/anydesk.gpg] http://deb.anydesk.com/ all main' | sudo tee /etc/apt/sources.list.d/anydesk.list
-# -----------------------------------------------------------------------------------------------------------------------
-# Brave
-curl -fsSL https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/brave-browser-archive-keyring.gpg
-echo deb [arch=amd64 signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-# -----------------------------------------------------------------------------------------------------------------------
-# Teamviewer
-wget -O- https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc | gpg --dearmor | sudo tee /usr/share/keyrings/teamview.gpg
-echo "deb [arch=amd64 signed-by=/usr/share/keyrings/teamview.gpg] http://linux.teamviewer.com/deb stable main" | sudo tee /etc/apt/sources.list.d/teamviewer.list
-# -----------------------------------------------------------------------------------------------------------------------
 wget https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors_amd64.deb
-dpkg -i ./onlyoffice-desktopeditors_amd64.deb
+sudo dpkg -i ./onlyoffice-desktopeditors_amd64.deb
 # -----------------------------------------------------------------------------------------------------------------------
 wget https://github.com/manga-download/hakuneko/releases/download/v6.1.7/hakuneko-desktop_6.1.7_linux_amd64.deb
-dpkg -i ./hakuneko-desktop_6.1.7_linux_amd64.deb
+sudo dpkg -i ./hakuneko-desktop_6.1.7_linux_amd64.deb
 # -----------------------------------------------------------------------------------------------------------------------
 # Required
 pip3 install netifaces suntime python-dateutil
-
-sudo apt update
-sudo apt install -y brave-browser anydesk teamviewer
 
 # fun
 # commented on 18/09/2022 must be 'relaxed' until real install, working great on VM tho

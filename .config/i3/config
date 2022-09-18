@@ -11,7 +11,3 @@ floating_modifier $mod
 new_window 1pixel
 gaps inner 8
 gaps outer 4
-
-bar{
-  status_command i3blocks
-}

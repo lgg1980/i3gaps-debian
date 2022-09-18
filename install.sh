@@ -67,9 +67,6 @@ sudo apt install -y dmenu sxhkd numlockx rofi dunst libnotify-bin picom unzip mo
 # Install fonts
 sudo apt install fonts-font-awesome fonts-powerline fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus fonts-cascadia-code
 
-# Various additional command line things
-sudo apt install mc squashfuse tilix cmatrix iw
-
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
 
@@ -114,6 +111,5 @@ source ~/i3gaps-debian/copyconf.sh
 source ~/i3gaps-debian/personal.sh
 
 sudo apt autoremove
-pip3 install netifaces
 
 printf "\e[1;32mYou can now reboot! Thanks you.\e[0m\n"

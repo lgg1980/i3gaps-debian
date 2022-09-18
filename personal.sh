@@ -16,6 +16,11 @@ sudo apt install -y obs-studio simplescreenrecorder
 sudo apt install -y qutebrowser filezilla keepassxc thunderbird thunderbird-l10n-es-es webext-tbsync telegram-desktop remmina timeshift
 # Image
 sudo apt install -y ristretto pinta flameshot
+# Conky
+sudo apt install -y conky-all
+
+mkdir ~/.config/conky
+conky -C > ~/.config/conky/conky.conf
 
 # Required
 pip3 install netifaces suntime python-dateutil

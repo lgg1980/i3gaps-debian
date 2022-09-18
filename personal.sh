@@ -18,7 +18,7 @@ sudo apt install -y filezilla keepassxc thunderbird thunderbird-l10n-es-es webex
 sudo apt install -y ristretto pinta flameshot
 
 # Required
-pip3 install netifaces
+pip3 install netifaces suntime python-dateutil
 
 # fun
 # commented on 18/09/2022 must be 'relaxed' until real install, working great on VM tho

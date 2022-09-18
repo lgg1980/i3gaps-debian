@@ -1,5 +1,5 @@
 # Various additional command line things
-sudo apt install mc squashfuse cmatrix iw
+sudo apt install mc squashfuse cmatrix iw playerctl
 sudo apt install -y cifs-utils hfsplus hfsutils hfsutils-tcltk gufw gparted bleachbit gdebi dosbox apt-transport-https
 sudo apt install -y rar p7zip-rar xarchiver p7zip-full unace zip unzip sharutils uudeview mpack arj cabextract file-roller zstd
 sudo apt install -y xclip libnotify-bin

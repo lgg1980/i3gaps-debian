@@ -16,3 +16,8 @@ assign [class="Firefox"] 1
 assign [class="kitty"] 2
 assign [class="Pcmanfm"] 3
 assign [class="btop"] 9
+
+for_window [class="Firefox"] focus
+for_window [class="kitty"] focus
+for_window [class="Pcmanfm"] focus
+for_window [class="btop"] focus

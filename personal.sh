@@ -13,7 +13,9 @@ sudo apt install -y clementine qbittorrent kid3 vlc youtube-dl kdenlive handbrak
 sudo apt install -y obs-studio simplescreenrecorder
 
 # Basic
-sudo apt install -y qutebrowser filezilla keepassxc thunderbird thunderbird-l10n-es-es webext-tbsync telegram-desktop remmina timeshift
+sudo apt install -y galculator keepassxc remmina timeshift
+# Internet
+sudo apt install -y qutebrowser filezilla thunderbird thunderbird-l10n-es-es webext-tbsync telegram-desktop
 # Image
 sudo apt install -y ristretto pinta flameshot
 # lock screen

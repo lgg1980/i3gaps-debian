@@ -70,6 +70,8 @@ sudo dpkg -i ./hakuneko-desktop_6.1.7_linux_amd64.deb
 # Required
 pip3 install netifaces suntime python-dateutil
 
+sudo apt --fix-broken install # onlyoffice dependencies
+
 # fun
 # commented on 18/09/2022 must be 'relaxed' until real install, working great on VM tho
 # sudo apt install -y etw openttd

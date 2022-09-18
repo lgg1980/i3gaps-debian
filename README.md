@@ -1,6 +1,8 @@
 # i3gaps
 # Works great with Debian Testing / Devuan Ceres
 
+# beware!: it's a fork and a personal mod from https://github.com/drewgrif/i3gaps-debian 
+
 NOTES:
 
 lightdm it's perfect for me. So I choose it.

@@ -7,6 +7,7 @@ sudo apt install -y xclip libnotify-bin
 sudo apt install -y gufw gparted bleachbit gdebi dosbox
 
 sudo apt install -y fonts-powerline fonts-liberation2
+sudo apt install -y numix-gtk-theme numix-icon-theme numix-icon-theme-circle
 
 # Multimedia
 sudo apt install -y clementine qbittorrent kid3 vlc youtube-dl kdenlive handbrake

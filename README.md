@@ -16,20 +16,6 @@ lightdm it's perfect for me. So I choose it.
 
 18/09/2022.... still learning to adjust it to my very own tastes. So much work to do!
 
-Conky
-
-In your conky config, add:
-
-own_window yes
-own_window_class Conky
-own_window_type override
-This line keeps conky from getting controlled by the wm:
-
-own_window_type override
-You'll also want
-
-background yes 
-
 ```
 sudo apt install git
 

@@ -15,11 +15,8 @@ super + p
 super + shift + q
      i3-msg exit
 
-super + r
-   kitty -e "ranger"
-
 super + e
-	thunar
+	pcmanfm
 
 super + m
 	mousepad

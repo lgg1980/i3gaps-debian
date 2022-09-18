@@ -1,7 +1,12 @@
 # i3gaps
 # Works great with Debian Testing / Devuan Ceres
 
-# beware!: it's a fork and a personal mod from https://github.com/drewgrif/i3gaps-debian 
+# beware!
+
+```
+it's a fork and a personal mod from https://github.com/drewgrif/i3gaps-debian 
+with many many influences from other people and myself :-) 
+```
 
 NOTES:
 

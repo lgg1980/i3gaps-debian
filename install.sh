@@ -98,7 +98,6 @@ Icon=i3
 Type=XSession
 EOF
 sudo cp ./temp /usr/share/xsessions/i3.desktop;rm ./temp
-
 ########################################################
 # End of script for default config
 #

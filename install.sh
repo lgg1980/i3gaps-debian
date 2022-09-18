@@ -35,8 +35,8 @@ sudo apt install -y kitty
 # Sound packages
 sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
 
-# Neofetch/HTOP
-sudo apt install -y neofetch htop
+# Neofetch/btop
+sudo apt install -y neofetch btop
 
 # EXA installation
 # replace ls command in .bashrc file with line below

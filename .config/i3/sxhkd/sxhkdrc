@@ -17,17 +17,13 @@ super + shift + q
 
 super + r
    kitty -e "ranger"
-   
-super + g
-	google-chrome-stable
-
-super + f
-	thunar
 
 super + e
-	geany
-	
+	thunar
 
+super + m
+	mousepad
+	
 alt + p
  rofi -show
 
@@ -35,9 +31,6 @@ alt + p
 
 super + w
     firefox-esr
-
-super + d 
- discord
 
 ctrl + alt + s
     flameshot gui
@@ -126,7 +119,7 @@ super+shift+{Left,Down,Up,Right}
 
 #other bindings
 
-super + shift + c
+super + q
     i3-msg kill
 
 super + alt + c

@@ -1,6 +1,6 @@
 # Various additional command line things
 sudo apt install mc squashfuse cmatrix iw playerctl
-sudo apt install -y cifs-utils hfsplus hfsutils hfsutils-tcltk exfat-utils apt-transport-https
+sudo apt install -y cifs-utils hfsplus hfsutils hfsutils-tcltk exfat-utils apt-transport-https gnupg2
 sudo apt install -y rar p7zip-rar xarchiver p7zip-full unace zip unzip sharutils uudeview mpack arj cabextract file-roller zstd
 sudo apt install -y xclip libnotify-bin
 
@@ -30,10 +30,9 @@ FLATPAK_LIST=(
 	net.davidotek.pupgui2
 	org.jdownloader.JDownloader
 	io.dbeaver.DBeaverCommunity
-  nz.mega.MEGAsync
-  com.github.eneshecan.WhatsAppForLinux
-  com.discordapp.Discord
-  com.anydesk.Anydesk
+        nz.mega.MEGAsync
+        com.github.eneshecan.WhatsAppForLinux
+        com.discordapp.Discord
 )
 
 # add flathub repository
@@ -54,7 +53,7 @@ for flatpak_name in ${FLATPAK_LIST[@]}; do
 		echo "$package_name already installed"
 	fi
 done
-
+# -----------------------------------------------------------------------------------------------------------------------
 # grab codium
 echo "Grabbing VSCode without telemetry"
 sleep 1

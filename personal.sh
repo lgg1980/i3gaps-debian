@@ -23,36 +23,6 @@ doas apt install -y ristretto pinta flameshot
 # lock screen
 doas apt install -y xss-lock i3lock
 
-# flatpak
-
-FLATPAK_LIST=(
-	net.veloren.airshipper
-	net.davidotek.pupgui2
-	org.jdownloader.JDownloader
-	io.dbeaver.DBeaverCommunity
-        nz.mega.MEGAsync
-        com.github.eneshecan.WhatsAppForLinux
-        com.discordapp.Discord
-)
-
-# add flathub repository
-doas flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-doas apt update
-
-# add third party software
- 
-# update repositories
-
-doas apt-get update -yq
-
-for flatpak_name in ${FLATPAK_LIST[@]}; do
-	if ! flatpak list | grep -q $flatpak_name; then
-		flatpak install "$flatpak_name" -y
-	else
-		echo "$package_name already installed"
-	fi
-done
 # -----------------------------------------------------------------------------------------------------------------------
 # grab codium
 echo "Grabbing VSCode without telemetry"

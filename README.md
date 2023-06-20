@@ -17,7 +17,11 @@ lightdm it's perfect for me. So I choose it.
 18/09/2022.... still learning to adjust it to my very own tastes. So much work to do!
 
 ```
-sudo apt install git
+Install as root!
+
+apt install git doas -yy
+
+copy doas.conf /etc/
 
 git clone --branch deb12 https://github.com/lgg1980/i3gaps-debian
 

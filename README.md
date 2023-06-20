@@ -19,7 +19,7 @@ lightdm it's perfect for me. So I choose it.
 ```
 sudo apt install git
 
-git clone --branch personal https://github.com/lgg1980/i3gaps-debian
+git clone --branch deb12 https://github.com/lgg1980/i3gaps-debian
 
 cd i3gaps-debian
 

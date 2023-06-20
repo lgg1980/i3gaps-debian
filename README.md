@@ -21,7 +21,7 @@ Install as root!
 
 apt install git doas -yy
 
-copy doas.conf /etc/
+mv doas.conf /etc/doas.conf
 
 git clone --branch deb12 https://github.com/lgg1980/i3gaps-debian
 

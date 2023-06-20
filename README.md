@@ -8,6 +8,7 @@ it's a fork and a personal mod from https://github.com/drewgrif/i3gaps-debian
 with many many influences from other people and myself :-) 
 
 18/09/2022 currently nerdfonts behaves weird, gotta reinstall after reboot and reload i3 to get the icons
+20/06/2023 let's revisit this again altough I'm not so convinced of the Linux desktop even WM
 ```
 
 NOTES:

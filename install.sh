@@ -4,68 +4,68 @@
 # Install packages after installing base Debian with no GUI
 
 # xorg display server installation
-sudo apt install -y xorg 
+doas apt install -y xorg 
 
 # Python installed for bumblebee-status. PACKAGE INCLUDES build-essential.
-sudo apt install -y python3-pip 
+doas apt install -y python3-pip 
 
 # Microcode for Intel/AMD 
-sudo apt install -y amd-microcode
-#sudo apt install -y intel-microcode 
+doas apt install -y amd-microcode
+#doas apt install -y intel-microcode 
 
 # Network Manager
-sudo apt install -y network-manager-gnome
+doas apt install -y network-manager-gnome
 
 # Installation for Appearance management
-sudo apt install -y lxappearance 
+doas apt install -y lxappearance 
 
 # File Manager (eg. pcmanfm,krusader)
-sudo apt install -y thunar xfce4-settings
+doas apt install -y thunar xfce4-settings
 
 # Network File Tools/System Events
-sudo apt install -y dialog mtools dosfstools avahi-daemon acpi acpid gvfs-backends
+doas apt install -y dialog mtools dosfstools avahi-daemon acpi acpid gvfs-backends
 
-sudo systemctl enable avahi-daemon
-sudo systemctl enable acpid
+doas systemctl enable avahi-daemon
+doas systemctl enable acpid
 
 # Terminal (eg. terminator,kitty,xfce4-terminal)
-sudo apt install -y kitty
+doas apt install -y kitty
 
 # Sound packages
-sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
+doas apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
 
 # Neofetch/btop
-sudo apt install -y neofetch btop
+doas apt install -y neofetch btop
 
 # EXA installation
 # replace ls command in .bashrc file with line below
 # alias ls='exa -al --long --header --color=always --group-directories-first' 
-sudo apt install -y exa
+doas apt install -y exa
 
 # Printing and bluetooth (if needed)
-sudo apt install -y cups
-sudo apt install -y bluez blueman
+doas apt install -y cups
+doas apt install -y bluez blueman
 
-sudo systemctl enable bluetooth
-sudo systemctl enable cups
+doas systemctl enable bluetooth
+doas systemctl enable cups
 
 # Browser Installation (eg. chromium)
-sudo apt install -y firefox-esr 
+doas apt install -y firefox-esr 
 
 # Desktop background browser/handler 
 # feh --bg-fill /path/to/directory 
 # example if you want to use in autostart.sh for i3-gaps
-# sudo apt install -y nitrogen 
-sudo apt install -y feh
+# doas apt install -y nitrogen 
+doas apt install -y feh
 
 # Required packages for i3-gaps installation
-sudo apt install -y meson dh-autoreconf libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev xcb libxcb1-dev libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev libxcb-xinerama0-dev libxkbcommon-x11-dev libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm0 libxcb-xrm-dev libxcb-shape0 libxcb-shape0-dev i3status
+doas apt install -y meson dh-autoreconf libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev xcb libxcb1-dev libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev libxcb-xinerama0-dev libxkbcommon-x11-dev libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm0 libxcb-xrm-dev libxcb-shape0 libxcb-shape0-dev i3status
 
 # Packages needed i3-gaps after installation
-sudo apt install -y dmenu sxhkd numlockx rofi dunst libnotify-bin picom unzip mousepad simple-scan
+doas apt install -y dmenu sxhkd numlockx rofi dunst libnotify-bin picom unzip mousepad simple-scan
 
 # Install fonts
-sudo apt install fonts-font-awesome fonts-powerline fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus fonts-cascadia-code
+doas apt install fonts-font-awesome fonts-powerline fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus fonts-cascadia-code
 
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
@@ -78,14 +78,14 @@ cd i3-gaps
 mkdir -p build && cd build
 meson --prefix /usr/local
 ninja
-sudo ninja install
+doas ninja install
 
-sudo apt install -y lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
-sudo systemctl enable lightdm
+doas apt install -y lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+doas systemctl enable lightdm
 
 # XSessions and i3.desktop
 if [[ ! -d /usr/share/xsessions ]]; then
-    sudo mkdir /usr/share/xsessions
+    doas mkdir /usr/share/xsessions
 fi
 
 cat > ./temp << "EOF"
@@ -97,7 +97,7 @@ Exec=i3
 Icon=i3
 Type=XSession
 EOF
-sudo cp ./temp /usr/share/xsessions/i3.desktop;rm ./temp
+doas cp ./temp /usr/share/xsessions/i3.desktop;rm ./temp
 ########################################################
 # End of script for default config
 #
@@ -109,6 +109,6 @@ source ~/i3gaps-debian/nerdfonts.sh
 source ~/i3gaps-debian/copyconf.sh
 source ~/i3gaps-debian/personal.sh
 
-sudo apt autoremove
+doas apt autoremove
 
 printf "\e[1;32mYou can now reboot! Thanks you.\e[0m\n"

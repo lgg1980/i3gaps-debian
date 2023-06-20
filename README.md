@@ -28,6 +28,8 @@ git clone --branch deb12 https://github.com/lgg1980/i3gaps-debian
 
 cd i3gaps-debian
 
+chmod +x *.sh
+
 ./install.sh (includes nerdfonts.sh and copyconf.sh unless commented)
 ```
 

@@ -6,7 +6,7 @@
 pip install --user bumblebee-status
 
 # Package needed for bumblebee-status if using apt module - currently configured is i3gaps config file.
-sudo apt install -y aptitude
+apt install -y aptitude
 
 cd
 cd i3gaps-debian
